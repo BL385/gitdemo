@@ -5,3 +5,9 @@
 
 library(dplyr)
 library(ggplot2)
+
+nba2018 <- read.csv("~/gitdemo/data/nba2018-players.csv")
+head(nba2018)
+warriors <- filter(nba2018, team == "GSW")
+write.csv(warriors, "~/gitdemo/data/warriors.csv", row.names = FALSE)
+
